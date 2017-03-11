@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/signup_layout"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:paddingTop="20dp"
+        android:layout_centerHorizontal="true">
+     <!--   android:numeric="integer" -->
+        <EditText
+            android:id="@+id/signup_id"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:hint="手机号"
+            android:background="@drawable/login_edit"
+            android:layout_margin="10dp"
+            android:layout_centerHorizontal="true"/>
+        <!-- 只能输入数字 -->
+
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/signup_id"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_edit"
+            android:hint="密码"
+            android:password="true"/>
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/signup_password"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_btn"
+            android:textAllCaps="false"
+            android:onClick="onSignUp"
+            android:layout_margin="10dp"
+            android:text="注册"/>
+    </RelativeLayout>
+
+</RelativeLayout>

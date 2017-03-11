@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"  tools:context=".MainActivity"
+    android:focusableInTouchMode="true"
+    android:id="@+id/login_activity"
+    android:background="@drawable/login_bg">
+
+    <RelativeLayout
+        android:id="@+id/login_layout"
+        android:layout_width="300dp"
+        android:layout_height="260dp"
+        android:layout_centerInParent="true">
+
+        <EditText
+            android:id="@+id/login_id"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:hint="请输入手机号"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_edit" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/login_id"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_edit"/>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_height="35dp"
+            android:layout_width="80dp"
+            android:layout_below="@id/login_password"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/login_btn"
+            android:text="登录"
+            android:textSize="16sp"
+            android:onClick="onLogin"/>
+
+        <com.example.shenxiaoming.loginui.view.UnderLineTv
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="20dp"
+            android:layout_below="@id/login_btn"
+            android:text="忘记密码？"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@drawable/login_to_signup"
+            android:onClick="onForget"/>
+
+        <com.example.shenxiaoming.loginui.view.UnderLineTv
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            android:layout_below="@id/login_btn"
+            android:text="注册 >"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@drawable/login_to_signup"
+            android:onClick="onSignUp"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/user_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/login_layout"
+        android:background="@drawable/user_photo"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
